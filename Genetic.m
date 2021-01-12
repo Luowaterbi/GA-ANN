@@ -13,9 +13,9 @@ outputnum = 1;
 
 %训练数据和预测数据
 input_train = input(1:50, :)';
-input_test = input(51:64, :)';
+input_test = input(51:62, :)';
 output_train = output(1:50)';
-output_test = output(51:64)';
+output_test = output(51:62)';
 
 %训练样本输入输出数据归一化
 [inputn, inputps] = mapminmax(input_train);

@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "chrono": "cpp",
+        "complex": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "algorithm": "cpp",
+        "regex": "cpp"
+    },
+    "python.pythonPath": "D:\\programs\\Anaconda3\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "[Log]": {
+
+    },
+    "editor.codeActionsOnSave": null
+}
