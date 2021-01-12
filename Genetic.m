@@ -26,8 +26,8 @@ output_test = output(51:62)';
 net = newff(inputn, outputn, hiddennum,{},'trainbr');
 
 %% 遗传算法参数初始化
-maxgen = 100; %进化代数，即迭代次数
-sizepop = 20; %种群规模
+maxgen = 50; %进化代数，即迭代次数
+sizepop = 10; %种群规模
 pcross = [0.4]; %交叉概率选择，0和1之间
 pmutation = [0.2]; %变异概率选择，0和1之间
 
@@ -96,7 +96,7 @@ end
 
 %% 把最优初始阀值权值赋予网络预测
 % %用遗传算法优化的BP网络进行值预测
-x = bestchrom;
+
 w1 = x(1:inputnum * hiddennum);
 B1 = x(inputnum * hiddennum + 1:inputnum * hiddennum + hiddennum);
 w2 = x(inputnum * hiddennum + hiddennum + 1:inputnum * hiddennum + hiddennum + hiddennum * outputnum);
@@ -109,7 +109,7 @@ net.b{2} = B2;
 
 %% BP网络训练
 %网络进化参数
-net.trainParam.epochs = 600;
+net.trainParam.epochs = 100;
 net.trainParam.lr = 0.1;
 net.trainParam.goal=0.00001;
 

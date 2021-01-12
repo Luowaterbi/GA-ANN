@@ -1,4 +1,5 @@
 import xlrd
+from random import shuffle
 
 
 def get_content(inpath):
@@ -25,6 +26,7 @@ if __name__ == "__main__":
     info = get_content("Appendix Data for Revisiting H-R Rules.xls")
     fin = open('input.txt', 'w')
     fout = open('output.txt', 'w')
+    shuffle(info)
     for i in info:
         fout.write("%f\n" % (i[0]))
         print(i[0])

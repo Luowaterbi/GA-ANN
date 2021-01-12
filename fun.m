@@ -17,12 +17,12 @@ B2=x(inputnum*hiddennum+hiddennum+hiddennum*outputnum+1:inputnum*hiddennum+hidde
 
 
 %网络进化参数
-net.trainParam.epochs=600;
+net.trainParam.epochs=100;
 net.trainParam.lr=0.1;
 net.trainParam.goal=0.00001;
 net.trainParam.show=100;
 net.trainParam.showWindow=0;
- 
+
 %网络权值赋值
 net.iw{1,1}=reshape(w1,hiddennum,inputnum);
 net.lw{2,1}=reshape(w2,outputnum,hiddennum);
