@@ -4,7 +4,6 @@ import xlrd
 def get_content(inpath):
     data = xlrd.open_workbook(inpath, encoding_override='utf-8')
     table = data.sheets()[0]
-    # nrows = table.nrows
     ncols = table.ncols
     cols_info = []
     for i in range(12, 76):
@@ -24,6 +23,12 @@ def get_content(inpath):
 
 if __name__ == "__main__":
     info = get_content("Appendix Data for Revisiting H-R Rules.xls")
-    print(len(info))
+    fin = open('input.txt', 'w')
+    fout = open('output.txt', 'w')
     for i in info:
-        print(i)
+        fout.write("%f\n" % (i[0]))
+        print(i[0])
+        fin.write("%f %f %f %f\n" %
+                  ((i[1] - i[2]) / i[1], i[3], i[4], i[5] - i[6]))
+    fin.close()
+    fout.close()

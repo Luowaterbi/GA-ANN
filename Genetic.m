@@ -4,7 +4,8 @@ clear
 %
 %% 网络结构建立
 %读取数据
-load data input output
+input=load('input.txt');
+output=load('output.txt');
 
 %节点个数
 inputnum = 4;
@@ -22,7 +23,7 @@ output_test = output(51:62)';
 [outputn, outputps] = mapminmax(output_train);
 
 %构建网络
-net = newff(inputn, outputn, hiddennum);
+net = newff(inputn, outputn, hiddennum,{},'trainbr');
 
 %% 遗传算法参数初始化
 maxgen = 100; %进化代数，即迭代次数
