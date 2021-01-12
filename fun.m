@@ -17,7 +17,7 @@ B2=x(inputnum*hiddennum+hiddennum+hiddennum*outputnum+1:inputnum*hiddennum+hidde
 
 
 %网络进化参数
-net.trainParam.epochs=20;
+net.trainParam.epochs=600;
 net.trainParam.lr=0.1;
 net.trainParam.goal=0.00001;
 net.trainParam.show=100;
